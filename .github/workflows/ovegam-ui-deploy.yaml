@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: Deploy ovegam UI to AWS
 
 on:
   push:
