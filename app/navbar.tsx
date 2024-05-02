@@ -10,7 +10,7 @@ export default function NavBar() {
   };
   return (
     <div>
-      <div className="hidden md:inline-flex w-screen flex-row h-28 text-[#1A8CD8] items-center justify-between font-extrabold shadow-[0_0.5px_0px_0px_rgba(26,140,216,0.5)]">
+      <div className="hidden md:inline-flex w-[100%] flex-row h-28 text-[#1A8CD8] items-center justify-between font-extrabold shadow-[0_0.5px_0px_0px_rgba(26,140,216,0.5)]">
         <Link href="#" className="text-4xl w-1/3 ml-20">
           Ovegam
         </Link>
@@ -40,26 +40,31 @@ export default function NavBar() {
           onClick={toggle}
           className="flex flex-col space-y-1 items-end w-1/2 mr-20 flex-grow"
         >
-          <span
-            className={`${
-              !isOpen ? "block" : "hidden"
-            } w-6 h-0.5 bg-[#1A8CD8] text-3xl`}
-          ></span>
-          <span
-            className={`${
-              !isOpen ? "block" : "hidden"
-            } w-6 h-0.5 bg-[#1A8CD8] text-3xl`}
-          ></span>
-          <span
-            className={`${
-              !isOpen ? "block" : "hidden"
-            } w-6 h-0.5 bg-[#1A8CD8] text-3xl`}
-          ></span>
-          <span
-            className={`${isOpen ? "block" : "hidden"} text-3xl text-[#1A8CD8]`}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className={`${!isOpen ? "block" : "hidden"} w-6 h-6 fill-[#1A8CD8]`}
           >
-            X
-          </span>
+            <path
+              fill-rule="evenodd"
+              d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className={`${isOpen ? "block" : "hidden"} w-6 h-6 fill-red-500`}
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
+              clip-rule="evenodd"
+            />
+          </svg>
         </div>
         <ul
           className={`${
