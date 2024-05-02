@@ -3,7 +3,7 @@ name: Deploy ovegam UI to AWS
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build_and_deploy:
