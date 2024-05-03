@@ -3,9 +3,9 @@ import "./globals.css";
 export default function Home() {
   return (
     <main className="flex h-[100%] w-[100%] flex-col items-center justify-center px-24 py-12">
-      <div className="flex flex-col md:flex-row justify-evenly w-[100%] gap-20">
+      <div className="flex flex-col md:flex-row justify-evenly w-[100%] gap-20 mt-28">
         <div className="lg:w-1/2 space-y-5 items-center">
-          <h1 className="text-[#1A8CD8] font-extrabold text-4xl italic">
+          <h1 className="text-[#1A8CD8] font-extrabold text-3xl">
             Effortless secure API's
           </h1>
           <h1 className="text-lg">
@@ -34,8 +34,8 @@ export default function Home() {
             </span>
           </div>
         </div>
-        <div className="lg:w-1/2 flex flex-col justify-start gap-5">
-          <div className="text-[#1A8CD8] font-extrabold text-4xl">
+        <div className="lg:w-1/2 flex flex-col justify-start gap-5 border-dashed border-[2px] p-4">
+          <div className="text-[#1A8CD8] font-extrabold text-3xl">
             Build APIs in 3 simple steps
           </div>
           <div className="flex flex-col w-[100%] h-[100%] gap-5 md:justify-around">
@@ -52,7 +52,7 @@ export default function Home() {
                 <path d="M12 20.25c2.685 0 5.19-.586 7.078-1.609a8.282 8.282 0 0 0 1.897-1.384c.016.121.025.244.025.368 0 2.692-4.03 4.875-9 4.875s-9-2.183-9-4.875c0-.124.009-.247.025-.368a8.284 8.284 0 0 0 1.897 1.384C6.809 19.664 9.315 20.25 12 20.25Z" />
               </svg>
               <div className="flex flex-col justify-center">
-                <span className="font-extrabold text-2xl text-[#1A8CD8]">
+                <span className="font-extrabold text-xl text-[#1A8CD8]">
                   STEP 1
                 </span>
                 <span className="font-bold">Connect your database</span>
@@ -70,7 +70,7 @@ export default function Home() {
               </svg>
 
               <div className="flex flex-col justify-center">
-                <span className="font-extrabold text-2xl text-[#1A8CD8]">
+                <span className="font-extrabold text-xl text-[#1A8CD8]">
                   STEP 2
                 </span>
                 <span className="font-bold">Write your database query</span>
@@ -91,7 +91,7 @@ export default function Home() {
               </svg>
 
               <div className="flex flex-col justify-center">
-                <span className="font-extrabold text-2xl text-[#1A8CD8]">
+                <span className="font-extrabold text-xl text-[#1A8CD8]">
                   STEP 3
                 </span>
                 <span className="font-bold">

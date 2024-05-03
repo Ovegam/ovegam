@@ -1,30 +1,32 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function NavBar() {
+  const pathname= usePathname();
   const [isOpen, setOpen] = useState(false);
   const toggle = () => {
     setOpen(!isOpen);
   };
   return (
     <div>
-      <div className="hidden md:inline-flex w-[100%] flex-row h-28 text-[#1A8CD8] items-center justify-between font-extrabold shadow-[0_0.5px_0px_0px_rgba(26,140,216,0.5)]">
+      <div className="hidden fixed md:inline-flex w-[100%] flex-row h-28 text-[#1A8CD8] items-center justify-between font-extrabold shadow-[0_0.5px_0px_0px_rgba(26,140,216,0.5)]">
         <Link href="#" className="text-4xl w-1/3 ml-20">
           Ovegam
         </Link>
         <ul className="text-sm font-light flex flex-row justify-evenly items-start w-2/3 mr-20">
-          <Link href="#" className="py-1 hover:underline underline-offset-8">
+          <Link href="/" className={`py-1 hover:underline underline-offset-8 ${pathname==='/'?'underline font-extrabold':''}`}>
             HOME
           </Link>
-          <Link href="#" className="py-1 hover:underline underline-offset-8">
+          <Link href="/product" className={`py-1 hover:underline underline-offset-8 ${pathname==='/product'?'underline  font-extrabold':''}`}>
             PRODUCT
           </Link>
-          <Link href="#" className="py-1 hover:underline underline-offset-8">
+          <Link href="/pricing" className={`py-1 hover:underline underline-offset-8 ${pathname==='/pricing'?'underline  font-extrabold':''}`}>
             PRICING
           </Link>
-          <Link href="#" className="py-1 hover:underline underline-offset-8">
+          <Link href="/contact" className={`py-1 hover:underline underline-offset-8 ${pathname==='/contact'?'underline  font-extrabold':''}`}>
             CONTACT
           </Link>
           <span className="border-[#1A8CD8] border-[1px] px-5 py-1 rounded-full hover:bg-[#1A8CD8] hover:text-white">
